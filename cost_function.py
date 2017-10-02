@@ -1,5 +1,6 @@
 import numpy as np
+import h_function
 def cost(X,y, theta):
     m = len(y)
-    h = np.dot(X,theta)
+    h = h_function.h(X,theta)
     return 2.0/m*sum((np.square(h-y)))
