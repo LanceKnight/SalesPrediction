@@ -10,7 +10,7 @@ def process_X(X):
     x3 = np.power(X,3)
     x4 = np.power(X, 4)
     #X = np.vstack([np.hstack(x0),np.hstack(x1)]).transpose() # for x to the power of 1
-    #X =  np.vstack([np.hstack(x0),np.hstack(x1),np.hstack(x2)]).transpose()
-    X = np.vstack([np.hstack(x0), np.hstack(x1), np.hstack(x2), np.hstack(x3)]).transpose()
+    X =  np.vstack([np.hstack(x0),np.hstack(x1),np.hstack(x2)]).transpose()
+    #X = np.vstack([np.hstack(x0), np.hstack(x1), np.hstack(x2), np.hstack(x3)]).transpose()
     #X = np.vstack([np.hstack(x0), np.hstack(x1), np.hstack(x2), np.hstack(x3),np.hstack(x4)]).transpose()
     return X
