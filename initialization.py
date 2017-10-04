@@ -16,6 +16,5 @@ def getX_y():
             number = float(numbers[0])
             y = np.append(y,number)
     X = np.array(range(1,count+1))
-    x0 = np.ones(np.size(X))
-    X = np.vstack([np.hstack(x0),np.hstack(X)]).transpose()
+
     return X,y
