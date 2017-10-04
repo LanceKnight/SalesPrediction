@@ -10,7 +10,7 @@ from cost_function import cost
 
 
 alpha = 0.0000001
-num_iters = 150000
+num_iters = 40000
 theta = np.array([0.1, 0.2,0.3, 0.4])
 
 
@@ -30,6 +30,7 @@ h = h(X,theta)
 
 print "X:", X
 print "Theta:", theta
+plt.figure()
 plt.plot(X[:,1],y,'ro')
 plt.plot(X[:,1],h,'b')
 plt.show()
