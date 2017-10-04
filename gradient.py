@@ -3,6 +3,7 @@ import h_function
 from cost_function import cost
 from matplotlib import pyplot as plt
 
+
 def gradient(X,y, theta, alpha, num_iters):
     m = len(y)
     cost_list = np.array([])
@@ -19,4 +20,5 @@ def gradient(X,y, theta, alpha, num_iters):
     plt.xlabel("iteration")
     plt.ylabel("cost")
     plt.plot(range(0, num_iters),cost_list, 'r-')
+
     return theta

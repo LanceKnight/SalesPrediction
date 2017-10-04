@@ -1,6 +1,8 @@
 import numpy as np
 #import matplotlib as plt
 from matplotlib import pyplot as plt
+import matplotlib as mpl
+from mpl_toolkits.mplot3d import Axes3D
 
 from initialization import getX_y
 from gradient import gradient
@@ -36,4 +38,16 @@ plt.xlabel("month(from Jun, 2016 to Sept,2017)")
 plt.ylabel("sales amount")
 plt.plot(X[:,1],y,'ro')
 plt.plot(X[:,1],h,'b')
+plt.show()
+
+mpl.rcParams['legend.fontsize'] = 10
+
+fig = plt.figure()
+ax = fig.gca(projection='3d')
+
+x1 = X[:,1]
+x2 = X[:,2]
+ax.plot(x1, x2, y, label='parametric curve')
+ax.legend()
+
 plt.show()
