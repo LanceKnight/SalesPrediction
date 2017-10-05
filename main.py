@@ -11,9 +11,9 @@ from process_X import process_X
 from cost_function import cost
 
 
-alpha = 0.00001
-num_iters = 40000
-theta = np.array([0.1, 0.2, 0.3])
+alpha = 0.0000001
+num_iters = 400
+theta = np.array([0.1, 0.2, 0.3,0.4,0.5,0.6])
 
 
 #get X, y as numpy array
@@ -37,7 +37,7 @@ plt.title("Sales Prediction")
 plt.xlabel("month(from Jun, 2016 to Sept,2017)")
 plt.ylabel("sales amount")
 plt.plot(X[:,2],y,'ro')
-plt.plot(X[:,2],h,'b')
+plt.plot(X[:,2],h,'b+')
 #plt.show()
 
 mpl.rcParams['legend.fontsize'] = 10
@@ -47,11 +47,12 @@ ax = fig.gca(projection='3d')
 
 x1 = X[:,1]
 x2 = X[:,2]
-ax.plot_wireframe(x1,x2, h, rstride=10, cstride=10)
-ax.scatter(x1, x2, y, label = "test", c = 'r')
+ax.plot_wireframe(x1,x2, h)
+ax.scatter(x1, x2, y, label = "y", c = 'r')
 ax.set_xlabel('Size')
 ax.set_ylabel('Month')
 ax.set_zlabel('Sales Qty(SF)')
 ax.legend()
 
 plt.show()
+

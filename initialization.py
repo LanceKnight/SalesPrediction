@@ -1,7 +1,7 @@
 import numpy as np
 
 def getX_y():
-    file_dir = "data/Processed Data2.csv"
+    file_dir = "data/Processed Data3.csv"
     y = np.array([])
     x1 = np.array([])
     x2 = np.array([])
